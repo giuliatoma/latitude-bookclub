@@ -47,18 +47,13 @@
   }
 
   .header h1 {
-    font-family: 'DM Sans', sans-serif;
     font-size: 3rem;
     font-weight: 400;
     line-height: 1.1;
-    color: var(--ink);
     margin-bottom: 10px;
   }
 
-  .header h1 em {
-    
-    color: var(--terracotta);
-  }
+  .header h1 em { color: var(--terracotta); font-style: italic; }
 
   .header-sub {
     font-size: 0.94rem;
@@ -92,46 +87,40 @@
   section { margin-bottom: 64px; }
 
   h2 {
-    font-family: 'DM Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.25;
-    color: var(--ink);
     margin-bottom: 20px;
   }
 
-  p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--ink);
-    line-height: 1.8;
-    margin-bottom: 14px;
-  }
+  p { font-size: 1rem; margin-bottom: 14px; }
 
   .lead {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.75;
     border-left: 2px solid var(--terracotta);
     padding-left: 20px;
     margin-bottom: 24px;
-    color: var(--ink);
   }
 
-  /* ── ABOUT GRID ── */
-  .about-grid {
+  /* ── GRIDS (Desktop) ── */
+  .about-grid, .pool-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2px;
     margin-top: 24px;
   }
 
-  .about-item {
+  .format-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .about-item, .format-card, .pool-card {
     background: var(--warm);
     padding: 18px 22px;
   }
 
-  .about-item .a-label {
+  .a-label, .f-label, .pool-origin {
     font-size: 0.94rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -140,39 +129,7 @@
     margin-bottom: 5px;
   }
 
-  .about-item .a-value {
-    font-size: 0.97rem;
-    font-weight: 400;
-    color: var(--ink);
-    line-height: 1.5;
-  }
-
-  /* ── FORMAT GRID ── */
-  .format-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-  }
-
-  .format-card {
-    background: var(--warm);
-    padding: 18px 20px;
-  }
-
-  .format-card .f-label {
-    font-size: 0.94rem;
-    font-weight: 500;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--terracotta);
-    margin-bottom: 6px;
-  }
-
-  .format-card .f-value {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--ink);
-  }
+  .f-label, .pool-origin { color: var(--terracotta); }
 
   /* ── BOOK CARDS ── */
   .book-card {
@@ -182,181 +139,40 @@
     background: var(--warm);
   }
 
-  .book-card:nth-child(even) {
-    background: var(--paper);
-    border: 1px solid var(--line);
-  }
-
   .book-num {
     background: var(--terracotta);
     color: white;
-    font-size: 0.94rem;
-    font-weight: 400;
     display: flex;
-    align-items: flex-start;
     justify-content: center;
     padding-top: 20px;
   }
 
-  .book-body {
-    padding: 18px 24px 20px;
-  }
-
-  .book-meta {
-    font-size: 0.94rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--clay);
-    margin-bottom: 5px;
-  }
-
-  .book-title {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    
-    color: var(--ink);
-    margin-bottom: 2px;
-  }
-
-  .book-author {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--muted);
-    margin-bottom: 10px;
-  }
-
-  .book-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 10px;
-  }
+  .book-body { padding: 18px 24px 20px; }
 
   .tag {
-    font-size: 0.94rem;
-    font-weight: 500;
-    letter-spacing: 0.12em;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--sage);
     border: 1px solid var(--sage);
     padding: 2px 8px;
+    margin-right: 4px;
+    display: inline-block;
   }
 
-  .book-why {
-    font-size: 1rem;
-    font-weight: 300;
-    color: #5a5550;
-    line-height: 1.75;
-    margin: 0;
-  }
-
-  /* ── POOL ── */
-  .pool-note {
-    background: var(--warm);
-    border-left: 2px solid var(--sage);
-    padding: 16px 22px;
-    margin-bottom: 20px;
-    font-family: 'DM Sans', sans-serif;
-    
-    font-size: 1rem;
-    color: var(--muted);
-  }
-
-  .pool-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-  }
-
-  .pool-card {
-    background: var(--warm);
-    padding: 16px 20px;
-  }
-
-  .pool-card:nth-child(even) {
-    background: var(--paper);
-    border: 1px solid var(--line);
-  }
-
-  .pool-origin {
-    font-size: 0.94rem;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--clay);
-    margin-bottom: 4px;
-  }
-
-  .pool-title {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1rem;
-    
-    color: var(--ink);
-    margin-bottom: 2px;
-  }
-
-  .pool-author {
-    font-size: 0.94rem;
-    font-weight: 300;
-    color: var(--muted);
-    margin-bottom: 8px;
-  }
-
-  .pool-tags { display: flex; flex-wrap: wrap; gap: 5px; }
-
-  /* ── SIGNATURE ── */
-  .signature {
-    border-top: 1px solid var(--line);
-    padding-top: 36px;
-    margin-top: 16px;
-  }
-
-  .sig-name {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--ink);
-    margin-bottom: 4px;
-  }
-
-  .sig-desc {
-    font-size: 0.96rem;
-    font-weight: 300;
-    color: var(--muted);
-    margin-bottom: 20px;
-  }
-
-  .social-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 14px;
-  }
-
+  /* ── SIGNATURE & FOOTER ── */
+  .social-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
   .social-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 0.94rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--ink);
     text-decoration: none;
+    color: var(--ink);
     border: 1px solid var(--line);
     padding: 6px 14px;
-    transition: border-color 0.2s, color 0.2s;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  .social-link:hover {
-    border-color: var(--terracotta);
-    color: var(--terracotta);
-  }
-
-  .social-icon { width: 13px; height: 13px; fill: currentColor; }
-
-  /* ── FOOTER ── */
   .doc-footer {
     margin-top: 72px;
     padding-top: 20px;
@@ -365,40 +181,34 @@
     justify-content: space-between;
   }
 
-  .doc-footer span {
-    font-size: 0.67rem;
-    font-weight: 400;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--muted);
+  /* ── MOBILE NUCLEAR OPTION ── */
+  @media (max-width: 600px) {
+    body { padding: 40px 20px; }
+    
+    .header h1 { font-size: 2.2rem; }
+
+    /* Force EVERYTHING into 1 column */
+    .about-grid, .format-grid, .pool-grid, .book-card {
+      grid-template-columns: 1fr !important;
+      display: flex !important;
+      flex-direction: column !important;
+    }
+
+    .book-num {
+      height: 40px;
+      justify-content: flex-start;
+      padding-left: 20px;
+      align-items: center;
+      padding-top: 0;
+    }
+
+    .social-row { flex-direction: column; }
+    .doc-footer { flex-direction: column; gap: 10px; }
   }
 
-@media print {
+  @media print {
     body { padding: 36px; }
     .book-card, .pool-card, .format-card, .about-item { break-inside: avoid; }
-  }
-  @media (max-width: 600px) {
-    body {
-      padding: 40px 24px; 
-    }
-    .header h1 {
-      font-size: 2.2rem; 
-    }
-    .about-grid, .format-grid, .facts, .pool-grid, .book-card {
-      grid-template-columns: 1fr !important; 
-    }
-    .book-card {
-      grid-template-columns: 1fr;
-    }
-    .book-num {
-      padding: 10px;
-      justify-content: flex-start;
-      height: 40px;
-    }
-    .doc-footer {
-      flex-direction: column;
-      gap: 10px;
-    }
   }
 </style>
 </head>
