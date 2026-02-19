@@ -373,10 +373,11 @@
     color: var(--muted);
   }
 
-  @media print {
+@media print {
     body { padding: 36px; }
-
-    @media (max-width: 600px) {
+    .book-card, .pool-card, .format-card, .about-item { break-inside: avoid; }
+  }
+  @media (max-width: 600px) {
     body {
       padding: 40px 24px; 
     }
@@ -392,9 +393,12 @@
     .book-num {
       padding: 10px;
       justify-content: flex-start;
+      height: 40px;
     }
-  }
-    .book-card, .pool-card, .format-card, .about-item { break-inside: avoid; }
+    .doc-footer {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 </style>
 </head>
