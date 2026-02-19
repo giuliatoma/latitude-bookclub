@@ -6,8 +6,7 @@
 <title>Latitude Book Club — Berlin Book Club</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
 <style>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
     --ink:         #1c1a17;
@@ -29,17 +28,15 @@
     max-width: 860px;
     margin: 0 auto;
     padding: 64px 52px 80px;
-    overflow-x: hidden;
   }
 
-  /* ── HEADER ── */
+  /* ── HEADERS & LABELS ── */
   .header { border-top: 3px solid var(--terracotta); padding-top: 48px; margin-bottom: 60px; }
   .eyebrow { font-size: 0.94rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 18px; }
   .header h1 { font-size: 3rem; font-weight: 400; line-height: 1.1; margin-bottom: 10px; }
   .header h1 em { color: var(--terracotta); font-style: italic; }
   .header-sub { font-size: 0.94rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 16px; }
 
-  /* ── SECTION LABELS ── */
   .section-label { font-size: 0.94rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase; color: var(--terracotta); margin-bottom: 20px; display: flex; align-items: center; gap: 14px; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--line); }
   section { margin-bottom: 64px; }
@@ -47,76 +44,51 @@
   p { font-size: 1rem; margin-bottom: 14px; }
   .lead { border-left: 2px solid var(--terracotta); padding-left: 20px; margin-bottom: 24px; }
 
-  /* ── GRIDS (Desktop) ── */
+  /* ── GRIDS (Matches Collab) ── */
   .about-grid, .pool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 24px; }
   .format-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
   .about-item, .format-card, .pool-card { background: var(--warm); padding: 18px 22px; }
-  .a-label, .f-label, .pool-origin { font-size: 0.94rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
-  .f-label, .pool-origin { color: var(--terracotta); }
+  .a-label, .f-label, .pool-origin { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); margin-bottom: 5px; }
 
-  /* ── BOOK CARDS ── */
-  .book-card { display: grid; grid-template-columns: 48px 1fr; margin-bottom: 2px; background: var(--warm); }
-  .book-num { background: var(--terracotta); color: white; display: flex; justify-content: center; padding-top: 20px; }
-  .book-body { padding: 18px 24px 20px; }
-  .tag { font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); border: 1px solid var(--sage); padding: 2px 8px; margin-right: 4px; display: inline-block; }
-
-  /* ── SIGNATURE & ICONS ── */
-  .social-row { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 12px; 
-    margin-top: 24px; 
-  }
-
+  /* ── THE SOCIAL LINKS (Exact Collab Match) ── */
+  .signature { border-top: 1px solid var(--line); padding-top: 36px; margin-top: 16px; }
+  .sig-name { font-size: 1.2rem; font-weight: 700; margin-bottom: 4px; }
+  .social-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  
   .social-link {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 18px; 
-    border: 1px solid var(--line);
-    text-decoration: none;
-    color: var(--ink);
+    gap: 7px;
     font-size: 0.85rem;
-    font-weight: 400;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
-    transition: all 0.25s ease;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--line);
+    padding: 8px 14px;
+    transition: all 0.2s;
   }
 
-  .social-link:hover {
-    background: var(--warm);
-    border-color: var(--terracotta);
-    color: var(--terracotta);
-  }
+  .social-link:hover { border-color: var(--terracotta); color: var(--terracotta); background: var(--warm); }
 
   .social-icon {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
+    fill: none;
     stroke: currentColor;
-    stroke-width: 1.5; /* This is the secret for the thin look */
+    stroke-width: 2;
     stroke-linecap: round;
     stroke-linejoin: round;
-    fill: none; /* Crucial: stops the 'black blob' effect */
   }
 
-  .doc-footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; }
-  .doc-footer span { font-size: 0.7rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
-
-  /* ── MOBILE FIXES ── */
+  /* ── MOBILE ── */
   @media (max-width: 600px) {
-    body { padding: 40px 20px; }
+    body { padding: 40px 24px; }
     .header h1 { font-size: 2.2rem; }
-    
-    /* Stack all grids */
-    .about-grid, .format-grid, .pool-grid, .book-card {
-      grid-template-columns: 1fr !important;
-      display: flex !important;
-      flex-direction: column !important;
-    }
-
-    .book-num { height: 40px; justify-content: flex-start; padding-left: 20px; align-items: center; padding-top: 0; }
-    .social-row { flex-direction: column; width: 100%; }
-    .social-link { width: 100%; justify-content: flex-start; }
+    .about-grid, .format-grid, .pool-grid, .book-card { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
+    .social-row { flex-direction: column; }
+    .social-link { width: 100%; }
     .doc-footer { flex-direction: column; gap: 10px; }
   }
 
@@ -124,7 +96,6 @@
     body { padding: 36px; }
     .book-card, .pool-card, .format-card, .about-item { break-inside: avoid; }
   }
-</style>
 </style>
 </head>
 <body>
@@ -332,31 +303,18 @@
   <div class="section-label">Contact</div>
   <div class="signature">
     <div class="sig-name">Giulia Tomasiello</div>
-    
     <div class="social-row">
       <a class="social-link" href="mailto:tomasiellogiulia@gmail.com">
         <svg class="social-icon" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-        tomasiellogiulia@gmail.com
+        Email
       </a>
-
       <a class="social-link" href="https://instagram.com/giuliatomasiello" target="_blank">
         <svg class="social-icon" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-        @giuliatomasiello
+        Instagram
       </a>
-
       <a class="social-link" href="https://www.linkedin.com/in/giulia-tomasiello/" target="_blank">
         <svg class="social-icon" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
         LinkedIn
-      </a>
-
-      <a class="social-link" href="https://fable.co/fabler/giuliatoma-530512120175" target="_blank">
-        <svg class="social-icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-        Fable
-      </a>
-
-      <a class="social-link" href="https://goodreads.com/giulia_toma" target="_blank">
-        <svg class="social-icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><circle cx="12" cy="8" r="3"></circle></svg>
-        Goodreads
       </a>
     </div>
   </div>
