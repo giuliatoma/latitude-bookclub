@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A monthly reading night with an ambient DJ, in your bookstore. Proposal for bookstores.">
+<meta property="og:title" content="Silent Book Rave: a proposal for bookstores">
+<meta property="og:description" content="Guests bring a book, read in silence for an hour to ambient music, then talk and browse your shelves.">
+<meta property="og:type" content="website">
+<title>Silent Book Rave: a proposal for bookstores</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #14213d;
+    --paper: #fffef9;
+    --accent: #e8590c;
+    --tan: #f4b42a;
+    --mute: #4a5568;
+    --line: #e5e1d4;
+    --on-accent: #14213d;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #f1f5f9; --paper: #0f172a; --accent: #ff9a4d; --tan: #ffe27a;
+      --mute: #94a3b8; --line: #263248; --on-accent: #14213d; color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #f1f5f9; --paper: #0f172a; --accent: #ff9a4d; --tan: #ffe27a;
+    --mute: #94a3b8; --line: #263248; --on-accent: #14213d; color-scheme: dark;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    background: var(--paper); color: var(--ink);
+    font-family: 'Newsreader', Georgia, serif; font-size: 1.08rem; font-weight: 400;
+    line-height: 1.6; max-width: 780px; margin: 0 auto; padding: 56px 40px 64px;
+  }
+  h1 { font-size: clamp(2.6rem, 8vw, 3.8rem); font-weight: 600; line-height: 1.03; letter-spacing: -0.01em; }
+  h2 { font-size: 1.35rem; font-weight: 600; margin-bottom: 12px; }
+  .sub { color: var(--accent); font-size: 1.3rem; margin: 12px 0 26px; }
+  .lead { max-width: 58ch; margin-bottom: 34px; }
+
+  .track { display: flex; height: 108px; }
+  .seg { padding: 12px 14px; display: flex; flex-direction: column; justify-content: space-between; font-size: 0.95rem; line-height: 1.3; }
+  .seg b { font-size: 1.9rem; font-weight: 600; line-height: 1; }
+  .s1 { flex: 20; background: #ffe27a; color: #14213d; }
+  .s2 { flex: 60; background: #ff9a4d; color: #14213d; }
+  .s3 { flex: 30; background: #a8d8ff; color: #14213d; }
+  .facts { margin: 12px 0 42px; color: var(--mute); font-size: 1rem; }
+
+  .cols { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; }
+  ul { list-style: none; }
+  li { padding: 10px 0; border-top: 1px solid var(--line); font-size: 1rem; }
+  li:last-child { border-bottom: 1px solid var(--line); }
+  li strong { font-weight: 600; }
+
+  .close { margin-top: 44px; padding-top: 22px; border-top: 2px solid var(--ink); display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .close p { max-width: 30ch; font-size: 1.2rem; line-height: 1.35; }
+  .contact { font-size: 1rem; line-height: 1.7; }
+  a { color: var(--ink); text-decoration-color: var(--accent); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  @media (max-width: 650px) {
+    body { padding: 40px 22px 48px; }
+    .track { flex-direction: column; height: auto; }
+    .s1 { min-height: 70px; } .s2 { min-height: 140px; } .s3 { min-height: 92px; }
+    .cols { grid-template-columns: 1fr; gap: 34px; }
+  }
+  @page { size: A4; margin: 12mm; }
+  @media print {
+    body { padding: 0; max-width: none; font-size: 0.9rem; line-height: 1.5; }
+    .seg { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .facts { margin-bottom: 26px; } .close { margin-top: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Silent Book Rave</h1>
+<p class="sub">A monthly reading night with an ambient DJ, in your bookstore.</p>
+
+<p class="lead">Guests bring a book, settle into cushions and read in silence for an hour while a DJ plays soft ambient music. Then they talk, and browse your shelves. The format began with Jucy Book Rave in Tokyo and has since spread to bookshops in other cities.</p>
+
+<div class="track" role="img" aria-label="The evening: 20 minutes settling in, 60 minutes of silent reading, 30 minutes of talking and browsing">
+  <div class="seg s1"><b>20</b><span>minutes to settle in</span></div>
+  <div class="seg s2"><b>60</b><span>minutes of silent reading, ambient music at low volume</span></div>
+  <div class="seg s3"><b>30</b><span>minutes to talk and browse the shelves</span></div>
+</div>
+<p class="facts">About 110 minutes on a weekday evening, for 25–30 guests who buy tickets in advance. Monthly, or as a single trial edition.</p>
+
+<div class="cols">
+  <section>
+    <h2>What your bookstore gets</h2>
+    <ul>
+      <li><strong>New customers.</strong> An audience of readers, drawn to your shop by the event.</li>
+      <li><strong>Book sales.</strong> The last 30 minutes are built around your shelves, with guests already in the mood to buy.</li>
+      <li><strong>Extra sales.</strong> Anything guests order beyond the included drink is yours.</li>
+      <li><strong>Your costs covered.</strong> Part of every ticket goes to you for the included drink and the extra staff hours. We agree the amount together.</li>
+      <li><strong>Visibility.</strong> Photos and posts that tag your shop, and an audience that follows the event.</li>
+      <li><strong>A regular event.</strong> A monthly slot that builds a returning crowd.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>What we’d ask of you</h2>
+    <ul>
+      <li><strong>The space</strong> for about 2.5 hours on an agreed weekday evening, with room for 25–30 people on cushions or low seating.</li>
+      <li><strong>A team member</strong> on site for the evening.</li>
+      <li><strong>A welcome drink</strong> for each guest, such as tea, included in the ticket.</li>
+      <li><strong>Power</strong> for a DJ setup, and a quiet corner near the shelves.</li>
+      <li><strong>Open shelves</strong> during the final 30 minutes.</li>
+      <li><strong>A quick check</strong> that your music licence covers a DJ set at a ticketed event, or can be registered for the night.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="close">
+  <p>Let’s talk for 15 minutes, or meet at the space and find a date.</p>
+  <div class="contact">
+    <strong>Giulia Tomasiello</strong><br>
+    <a href="mailto:tomasiellogiulia@gmail.com">tomasiellogiulia@gmail.com</a><br>
+    <a href="https://instagram.com/giuliatomasiello">instagram.com/giuliatomasiello</a>
+  </div>
+</div>
+
+</body>
+</html>
